@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'thin'
 gem 'bootstrap-sass-rails'
+gem 'ember-rails'
 
 # Defaults
 
