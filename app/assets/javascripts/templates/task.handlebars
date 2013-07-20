@@ -1,5 +1,14 @@
 <article class='task'>
-  <header><h2>{{name}}</h2></header>
-  <div class='description'>{{md description}}</div>
-  <footer></footer>
+  <header>
+    <h2>{{name}}</h2>
+  </header>
+  <blockquote class='description'>
+    {{md description}}
+  </blockquote>
+  <div class='activities'>
+    {{#each activities}}
+      <hr>
+      {{render 'activity' this}}
+    {{/each}}
+  </div>
 </article>
