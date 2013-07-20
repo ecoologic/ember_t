@@ -50,7 +50,7 @@ development:
 test:
   adapter:  postgresql
   encoding: unicode
-  database: t_development
+  database: t_test
   pool:     5
   username: t
   password: t
