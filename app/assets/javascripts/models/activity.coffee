@@ -5,7 +5,7 @@ App.Activity = DS.Model.extend
 App.Activity.FIXTURES = [
   {
     id:          0
-    description: "Went to the shop, got the milk, gave the money, came back and put it in the fridge"
+    description: "Went to the shop, got the **milk**, gave the money, came back and put it in the fridge"
     task:        0
   }
   {
