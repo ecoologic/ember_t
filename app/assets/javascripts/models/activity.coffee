@@ -14,3 +14,5 @@ App.Activity.FIXTURES = [
     task:        0
   }
 ]
+
+DS.RESTAdapter.configure 'plurals', activity: 'activities'

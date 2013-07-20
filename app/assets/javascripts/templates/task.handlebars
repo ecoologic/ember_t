@@ -6,9 +6,13 @@
     {{md description}}
   </blockquote>
   <div class='activities'>
+
+    <hr>
     {{#each activities}}
-      <hr>
       {{render 'activity' this}}
+      <hr>
+    {{else}}
+      <p class='empty'>There is no activity yet</p>
     {{/each}}
   </div>
 </article>
