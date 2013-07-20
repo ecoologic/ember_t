@@ -1,0 +1,7 @@
+<h2>Task List</h2>
+
+<ul>
+  {{#each model}}
+    <li>{{#linkTo 'task' this}}{{name}}{{/linkTo}}</li>
+  {{/each}}
+</ul>

@@ -1,3 +1,3 @@
-App.Router.map (match)->
-  # match('/').to('index')
-
+App.Router.map ->
+  @resource 'tasks', path: 'tasks', ->
+    @resource 'task', path: ':task_id'
