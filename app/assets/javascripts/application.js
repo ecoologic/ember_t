@@ -18,4 +18,6 @@
 //= require_self
 //= require app
 
+var showdown = new Showdown.converter();
+
 App = Ember.Application.create();
