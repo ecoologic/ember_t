@@ -16,3 +16,13 @@
 html, body {
   background-color: #BBF;
 }
+
+p.empty {
+  font-style: italic;
+  text-align: center;
+}
+
+a.active {
+  color: darkblue;
+  font-weight: bolder;
+}

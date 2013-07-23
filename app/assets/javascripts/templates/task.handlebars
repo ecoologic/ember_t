@@ -2,18 +2,16 @@
   <header>
     <h2>{{name}}</h2>
   </header>
-  <blockquote class='description'>
+  <blockquote class='description well'>
     {{md description}}
   </blockquote>
   <div class='activities'>
     {{view App.ActivityFormView}}
 
-    <hr>
     {{#each activities}}
       {{render 'activity' this}}
-      <hr>
     {{else}}
-      <p class='empty'>There is no activity yet</p>
+      <p class='empty well well-small'>There is no activity yet</p>
     {{/each}}
   </div>
 </article>
