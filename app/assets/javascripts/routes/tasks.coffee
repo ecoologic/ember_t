@@ -1,5 +1,5 @@
-App.TasksRoute = Ember.Route.extend
+App.TasksRoute = Em.Route.extend
   model: -> App.Task.find()
 
-App.TaskRoute = Ember.Route.extend
+App.TaskRoute = Em.Route.extend
   model: (params) -> App.Task.find(params.task_id)

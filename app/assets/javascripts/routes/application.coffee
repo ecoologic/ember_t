@@ -1,4 +1,4 @@
-App.ApplicationRoute = Ember.Route.extend
+App.ApplicationRoute = Em.Route.extend
   model: ->
     name: "T"
   events:

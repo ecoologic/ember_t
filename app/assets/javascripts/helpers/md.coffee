@@ -1,2 +1,2 @@
-Ember.Handlebars.registerBoundHelper 'md', (text) ->
-  new Ember.Handlebars.SafeString window.showdown.makeHtml(text) if text?
+Em.Handlebars.registerBoundHelper 'md', (text) ->
+  new Em.Handlebars.SafeString window.showdown.makeHtml(text) if text?

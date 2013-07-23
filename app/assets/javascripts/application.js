@@ -20,4 +20,4 @@
 
 var showdown = new Showdown.converter();
 
-App = Ember.Application.create();
+App = Em.Application.create();
