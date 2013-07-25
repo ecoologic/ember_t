@@ -3,9 +3,11 @@ App.ActivityFormView = Em.View.extend
   tagName:      'form'
   classNames:   'row'
   actionName:   'submit'
-  submit: ->
-    t = @get('controller').get('model')
-    as = t.get('activities')
-    as.createRecord(description: @get('description'), duration: parseFloat(@get('duration')))
+
+  reset: ->
     @set('description', '')
-    @set('duration', 0)
+    @set('duration', '')
+
+  submit: ->
+    @get('controller').addActivity(description: @get('description'), duration: @get('duration'))
+    @reset()
