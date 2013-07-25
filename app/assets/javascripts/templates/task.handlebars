@@ -9,12 +9,12 @@
     </small>
   </blockquote>
   <div class='activities'>
-    {{#each activities}}
+    {{view App.ActivityFormView}}
+
+    {{#each reverseActivities}}
       {{render 'activity' this}}
     {{else}}
       <p class='empty well well-small'>There is no activity yet</p>
     {{/each}}
-
-    {{view App.ActivityFormView}}
   </div>
 </article>
