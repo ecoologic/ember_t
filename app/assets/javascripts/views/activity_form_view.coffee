@@ -6,5 +6,6 @@ App.ActivityFormView = Em.View.extend
   submit: ->
     t = @get('controller').get('model')
     as = t.get('activities')
-    as.createRecord(description: @get('description'))
+    as.createRecord(description: @get('description'), duration: @get('duration'))
     @set('description', '')
+    @set('duration', 0)
