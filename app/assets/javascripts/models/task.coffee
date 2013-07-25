@@ -3,6 +3,14 @@ App.Task = DS.Model.extend
   description: DS.attr('string')
   activities:  DS.hasMany('App.Activity')
 
+  duration: (->
+    sum = 0
+    @get('activities').forEach (activity) ->
+      if activity.get('duration')?
+        sum += activity.get('duration')
+    sum
+  ).property('activities.@each.duration')
+
 App.Task.FIXTURES = [
   {
     id:          0
