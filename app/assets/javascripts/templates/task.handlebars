@@ -1,10 +1,12 @@
 <article class='task'>
+
   <blockquote class='description well'>
     {{md description}}
     <small>
-      duration: {{duration}} h &mdash; {{time createdAt}}
+      {{time createdAt}} &mdash; {{duration}} h 
     </small>
   </blockquote>
+
   <div class='activities'>
     {{view App.ActivityFormView}}
 
@@ -14,4 +16,5 @@
       <p class='empty well well-small'>There is no activity yet</p>
     {{/each}}
   </div>
+
 </article>

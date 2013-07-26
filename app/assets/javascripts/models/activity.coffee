@@ -11,7 +11,7 @@ App.Activity.FIXTURES = [
     description: "Went to the shop, got the **milk**, gave the money, came back and put it in the fridge"
     isQuestion:  false
     duration:    0.75
-    created_at:  AppDate.daysAgo(2)
+    createdAt:   AppDate.daysAgo(2)
     task:        0
   }
   {
@@ -19,7 +19,7 @@ App.Activity.FIXTURES = [
     description: "I don't care, it's not there anymore"
     isQuestion:  false
     duration:    0.25
-    created_at:  AppDate.yesterday()
+    createdAt:   AppDate.yesterday()
     task:        0
   }
   {
@@ -27,7 +27,7 @@ App.Activity.FIXTURES = [
     description: "Really???"
     isQuestion:  true
     duration:    0
-    created_at:  AppDate.today()
+    createdAt:   AppDate.today()
     task:        0
   }
 ]
