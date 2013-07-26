@@ -9,12 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require twitter/bootstrap
+ *= require bootstrap_overrides
  *= require_self
- *= require_tree .
  */
 
 html, body {
-  background-color: #BBF;
+  background-color: #8AA894;
 }
 
 p.empty {
