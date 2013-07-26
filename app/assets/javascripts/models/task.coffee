@@ -6,8 +6,7 @@ App.Task = DS.Model.extend
   duration: (->
     sum = 0
     @get('activities').forEach (activity) ->
-      if activity.get('duration')?
-        sum += activity.get('duration')
+      sum += activity.get('duration')
     sum
   ).property('activities.@each.duration')
 

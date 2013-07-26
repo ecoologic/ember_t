@@ -6,4 +6,6 @@ App.TaskController = Em.ObjectController.extend
   addActivity: (params) ->
     t = @get('model')
     as = t.get('activities')
-    as.createRecord(description: params.description, duration: parseFloat(params.duration))
+    duration = parseFloat(params.duration)
+    duration = 0 unless duration > 0
+    as.createRecord(description: params.description, duration: duration)
