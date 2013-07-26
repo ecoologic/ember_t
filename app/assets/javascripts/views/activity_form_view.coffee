@@ -7,7 +7,8 @@ App.ActivityFormView = Em.View.extend
   reset: ->
     @set('description', '')
     @set('duration', '')
+    @set('isQuestion', '')
 
   submit: ->
-    @get('controller').addActivity(description: @get('description'), duration: @get('duration'))
+    @get('controller').addActivity(description: @get('description'), duration: @get('duration'), isQuestion: @get('isQuestion'))
     @reset()
