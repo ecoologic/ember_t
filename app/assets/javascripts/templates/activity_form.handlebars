@@ -1,7 +1,7 @@
-<div class='span8 form-inline'>
+<div class='span9 form-inline'>
   <label>
     Add your activity here:
-    {{textarea value=view.description type='text' rows=3 placeholder="What have you done?" class='span8'}}
+    {{textarea value=view.description type='text' rows=3 placeholder="What have you done?" class='span9'}}
   </label>
   <label>
     Duration:
@@ -14,8 +14,6 @@
     Mark as question:
     {{input checked=view.checkIsQuestion type='checkbox'}}
   </label>
+  <button type='submit' class='btn btn-primary pull-right'>Save</button>
 </div>
 
-<div class='controls span1'>
-  <button type='submit' class='btn btn-primary'>Save</button>
-</div>

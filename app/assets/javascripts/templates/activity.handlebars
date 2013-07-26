@@ -1,8 +1,8 @@
-<article>
-  <blockquote  {{bindAttr class='isQuestion :activity :well :well-small'}}>
+<article class='activity'>
+  <blockquote  {{bindAttr class='isQuestion :well :well-small'}}>
     {{md description}}
     <small>
-      duration: {{duration}} h
+      duration: {{duration}} h &mdash; {{time createdAt}}
     </small>
   </blockquote>
 </article>

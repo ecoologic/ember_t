@@ -15,6 +15,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require app_date
 //= require_self
 //= require app
 

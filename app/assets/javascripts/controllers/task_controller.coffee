@@ -8,4 +8,4 @@ App.TaskController = Em.ObjectController.extend
     as = t.get('activities')
     duration = parseFloat(params.duration)
     duration = 0 unless duration > 0
-    as.createRecord(description: params.description, duration: duration, isQuestion: params.isQuestion)
+    as.createRecord(description: params.description, duration: duration, isQuestion: params.isQuestion, createdAt: (new Date))
