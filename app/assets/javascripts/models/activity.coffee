@@ -44,6 +44,15 @@ App.Activity.FIXTURES = [
     id:          211
   }
   {
+    description: "Create a new activity"
+    isQuestion:  false
+    duration:    12
+    createdAt:   AppDate.daysAgo(12)
+    project:     2
+    task:        21
+    id:          212
+  }
+  {
     description: "Adding project management"
     isQuestion:  false
     duration:    8
