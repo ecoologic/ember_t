@@ -4,31 +4,53 @@ App.Activity = DS.Model.extend
   duration:    DS.attr('number')
   createdAt:   DS.attr('date')
   task:        DS.belongsTo('App.Task')
+  project:     DS.belongsTo('App.Project')
 
 App.Activity.FIXTURES = [
   {
-    id:          0
     description: "Went to the shop, got the **milk**, gave the money, came back and put it in the fridge"
     isQuestion:  false
     duration:    0.75
     createdAt:   AppDate.daysAgo(2)
-    task:        0
+    project:     1
+    task:        11
+    id:          111
   }
   {
-    id:          1
     description: "I don't care, it's not there anymore"
     isQuestion:  false
     duration:    0.25
     createdAt:   AppDate.yesterday()
-    task:        0
+    project:     1
+    task:        11
+    id:          112
   }
   {
-    id:          2
     description: "Really???"
     isQuestion:  true
     duration:    0
     createdAt:   AppDate.today()
-    task:        0
+    project:     1
+    task:        11
+    id:          113
+  }
+  {
+    description: "Building the task manager..."
+    isQuestion:  false
+    duration:    12
+    createdAt:   AppDate.daysAgo(12)
+    project:     2
+    task:        21
+    id:          211
+  }
+  {
+    description: "Adding project management"
+    isQuestion:  false
+    duration:    8
+    createdAt:   AppDate.today()
+    project:     2
+    task:        22
+    id:          221
   }
 ]
 
