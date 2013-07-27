@@ -1,4 +1,4 @@
 App.ApplicationRoute = Em.Route.extend
   model: ->
-    name: "T"
+    App.Project.find()
   # events:
