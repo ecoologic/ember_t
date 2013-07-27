@@ -1,2 +1,9 @@
-<h3>Create a new task</h3>
+<h3>{{name}}</h3>
+<blockquote class='description well'>
+  {{md description}}
+  <small>
+    {{time createdAt}} &mdash; {{duration}} h
+  </small>
+</blockquote>
+
 {{view App.TaskFormView}}
