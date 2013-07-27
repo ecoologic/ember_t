@@ -8,13 +8,7 @@
   </blockquote>
 
   <div class='activities'>
-    {{view App.ActivityFormView}}
-
-    {{#each reverseActivities}}
-      {{render 'activity' this}}
-    {{else}}
-      <p class='empty well well-small'>There is no activity yet</p>
-    {{/each}}
+    {{render 'activities' activities}}
   </div>
 
 </article>
