@@ -13,7 +13,7 @@ App.ActivityFormView = Em.View.extend
     @bind('description', 'App.ActivityFormView.checkIsQuestion')
 
   submit: ->
-    @get('controller').addActivity(description: @get('description'), duration: @get('duration'), isQuestion: @get('checkIsQuestion'))
+    @get('controller').create(description: @get('description'), duration: @get('duration'), isQuestion: @get('checkIsQuestion'))
     @reset()
 
   checkIsQuestion: (->

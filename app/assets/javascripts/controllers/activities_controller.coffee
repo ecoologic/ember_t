@@ -3,7 +3,8 @@ App.ActivitiesController = Em.ArrayController.extend
       @get('model').toArray().reverse()
   ).property('length')
 
-  addActivity: (params) ->
+  create: (params) ->
     duration = parseFloat(params.duration)
     duration = 0 unless duration > 0
+    # TODO: is this saving with the right foreign key??
     @get('model').createRecord(description: params.description, duration: duration, isQuestion: params.isQuestion, createdAt: (new Date))
