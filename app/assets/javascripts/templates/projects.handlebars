@@ -1,5 +1,7 @@
 <ul class='nav nav-tabs nav-stacked'>
   {{#each model}}
-    <li>{{#linkTo 'task' this}}{{name}}{{/linkTo}}</li>
+    <li>{{#linkTo 'project' this}}{{name}}{{/linkTo}}</li>
   {{/each}}
 </ul>
+
+{{outlet}}
