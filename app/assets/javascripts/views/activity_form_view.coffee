@@ -15,7 +15,7 @@ App.ActivityFormView = Em.View.extend
   submit: ->
     duration = parseFloat @get('duration')
     duration = 0 unless duration > 0
-    activities = @get('controller').get('model')
+    activities = @get('controller.model')
     activities.createRecord(description: @get('description'), duration: @get('duration'), isQuestion: @get('checkIsQuestion'), createdAt: (new Date))
     @reset()
 

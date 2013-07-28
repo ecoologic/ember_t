@@ -9,6 +9,6 @@ App.TaskFormView = Em.View.extend
     @set('description', '')
 
   submit: ->
-    project = @get('controller').get('model')
+    project = @get('controller.model')
     project.get('tasks').createRecord(name: @get('name'), description: @get('description'), createdAt: (new Date))
     @reset()
