@@ -12,6 +12,11 @@ App.Task = DS.Model.extend
     sum
   ).property('activities.@each.duration')
 
+  lastActivityIsQuestion: (->
+    activity = @get('activities.lastObject')
+    activity.get('isQuestion') if activity?
+  ).property('activities.lastObject.isQuestion')
+
 App.Task.FIXTURES = [
   {
     name:        "Please buy the Milk"

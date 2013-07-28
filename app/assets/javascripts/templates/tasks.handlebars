@@ -1,5 +1,7 @@
 <ul class='nav nav-tabs nav-stacked'>
   {{#each model}}
-    <li>{{#linkTo 'task' this}}{{name}}{{/linkTo}}</li>
+    <li {{bindAttr class='lastActivityIsQuestion'}}>
+      {{#linkTo 'task' this}} {{name}} {{/linkTo}}
+    </li>
   {{/each}}
 </ul>
