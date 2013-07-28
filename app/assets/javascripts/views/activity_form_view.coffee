@@ -9,8 +9,8 @@ App.ActivityFormView = Em.View.extend
     @set('duration', '')
     # FIXME: after first click or code assign the binding is lost :(
     #        maybe see here: http://emberjs.com/api/classes/Ember.Binding.html
-    # @set('checkIsQuestion', false) if @get('checkIsQuestion', true)
-    @bind('description', 'App.ActivityFormView.checkIsQuestion')
+    # @bind('description', 'App.ActivityFormView.checkIsQuestion')
+    @set('checkIsQuestion', false) if @get('checkIsQuestion', true)
 
   submit: ->
     duration = parseFloat @get('duration')

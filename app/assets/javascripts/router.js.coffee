@@ -4,13 +4,14 @@ App.Router.map ->
 
 App.ApplicationRoute = Em.Route.extend
   model: -> App.Project.find()
-  # events:
+  # setupController: (controller, model) -> @controllerFor('model')
+  # events: {}
 
 App.ProjectRoute = Em.Route.extend
   model: (params) -> App.Project.find(params.project_id)
 
 App.ProjectIndexRoute = Ember.Route.extend
-  model: (params) -> @modelFor('project')
+  model: -> @modelFor('project')
 
 App.TasksRoute = Em.Route.extend
   model: (params) -> App.Project.find(params.project_id).get('tasks')
