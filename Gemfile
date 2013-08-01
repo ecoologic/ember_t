@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'thin'
 gem 'bootstrap-sass-rails'
 gem 'ember-rails'
+gem "d3_rails"
 
 # Defaults
 

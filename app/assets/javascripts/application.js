@@ -16,6 +16,7 @@
 //= require ember
 //= require ember-data
 //= require app_date
+//= require d3
 //= require_self
 //= require app
 

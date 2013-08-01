@@ -39,3 +39,8 @@ input[type="number"] {
 .tasks li.last-activity-is-question {
   background-color: lightsalmon;
 }
+
+.ember-view > footer {
+  height: 500px;
+  border: 5px solid red;
+}
