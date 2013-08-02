@@ -43,3 +43,7 @@ input[type="number"] {
 form.is-new .is-new-false { display: none }  
 form:not(.is-new) .is-new-true  { display: none; }
 
+.full-width {
+  width: 100%;
+  display: inline-block;
+}
