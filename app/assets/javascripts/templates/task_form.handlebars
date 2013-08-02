@@ -1,11 +1,16 @@
 <div class='span9 form-inline'>
-  <label>
-    Create a new task:
-    {{input class='span9' value=view.name type='text' placeholder="Task name here..."}}
-  </label>
-  <label>
-    Description:
-    {{textarea class='span9' value=view.description rows=3 placeholder='Task description...'}}
-  </label>
-  <button type='submit' class='btn btn-primary pull-right'>Save</button>
+  <div class='is-new-true'>
+    <label>
+      Create a new task:
+      {{input class='span9' value=view.name type='text' placeholder="Task name here..."}}
+    </label>
+    <label>
+      Description:
+      {{textarea class='span9' value=view.description rows=3 placeholder='Task description...'}}
+    </label>
+    <button type='submit' class='btn btn-primary pull-right'>Save</button>
+  </div>
+  <div class='is-new-false'>
+    <button type='submit' class='btn btn-primary pull-right new-task'>New Task</button>
+  </div>
 </div>

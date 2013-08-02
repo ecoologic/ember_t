@@ -1,19 +1,24 @@
 <div class='span9 form-inline'>
-  <label>
-    Add your activity here:
-    {{textarea class='span9' value=view.description rows=3 placeholder="What have you done?"}}
-  </label>
-  <label>
-    Duration:
-    <div class='input-append'>
-      {{input value=view.duration type='number' step='0.25' min=0 max=12 placeholder=0}}
-      <span class='add-on'>h</span>
-    </div>
-  </label>
-  <label>
-    Mark as question:
-    {{input checked=view.checkIsQuestion type='checkbox'}}
-  </label>
-  <button type='submit' class='btn btn-primary pull-right'>Save</button>
+  <div class='is-new-true'>
+    <label>
+      Add your activity here:
+      {{textarea class='span9' value=view.description rows=3 placeholder="What have you done?"}}
+    </label>
+    <label>
+      Duration:
+      <div class='input-append'>
+        {{input value=view.duration type='number' step='0.25' min=0 max=12 placeholder=0}}
+        <span class='add-on'>h</span>
+      </div>
+    </label>
+    <label>
+      Mark as question:
+      {{input checked=view.checkIsQuestion type='checkbox'}}
+    </label>
+    <button type='submit' class='btn btn-primary pull-right'>Save</button>
+  </div>
+  <div class='is-new-false'>
+    <button type='submit' class='btn btn-primary pull-right new-task'>New Activity</button>
+  </div>
 </div>
 

@@ -1,4 +1,6 @@
 App.ActivityFormView = Em.View.extend
+  classNameBindings: ['isNew']
+  isNew:             false
   templateName: 'activity_form'
   tagName:      'form'
   classNames:   'row'
@@ -13,11 +15,14 @@ App.ActivityFormView = Em.View.extend
     @set('checkIsQuestion', false) if @get('checkIsQuestion', true)
 
   submit: ->
-    duration = parseFloat @get('duration')
-    duration = 0 unless duration > 0
-    activities = @get('controller.model')
-    activities.createRecord(description: @get('description'), duration: duration, isQuestion: @get('checkIsQuestion'), createdAt: (new Date))
-    @reset()
+    if @get('isNew')
+      duration = parseFloat @get('duration')
+      duration = 0 unless duration > 0
+      activities = @get('controller.model')
+      activities.createRecord(description: @get('description'), duration: duration, isQuestion: @get('checkIsQuestion'), createdAt: (new Date))
+      @reset()
+    else
+      @set('isNew', true)
 
   checkIsQuestion: (->
       @get('description')? && @get('description').match(/\?/)?

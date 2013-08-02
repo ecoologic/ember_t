@@ -1,4 +1,6 @@
 App.TaskFormView = Em.View.extend
+  classNameBindings: ['isNew']
+  isNew:             false
   templateName: 'task_form'
   tagName:      'form'
   classNames:   'row'
@@ -9,6 +11,10 @@ App.TaskFormView = Em.View.extend
     @set('description', '')
 
   submit: ->
-    project = @get('controller.model')
-    project.get('tasks').createRecord(name: @get('name'), description: @get('description'), createdAt: (new Date))
-    @reset()
+    console.log 'xxx', @get('isNew')
+    if @get('isNew')
+      project = @get('controller.model')
+      project.get('tasks').createRecord(name: @get('name'), description: @get('description'), createdAt: (new Date))
+      @reset()
+    else
+      @set('isNew', true)
