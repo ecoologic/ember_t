@@ -3,8 +3,11 @@ App.Activity = DS.Model.extend
   isQuestion:  DS.attr('boolean')
   duration:    DS.attr('number')
   createdAt:   DS.attr('date')
-  task:        DS.belongsTo('App.Task')
+  company:     DS.belongsTo('App.Company')
   project:     DS.belongsTo('App.Project')
+  task:        DS.belongsTo('App.Task')
+
+DS.RESTAdapter.configure 'plurals', activity: 'activities'
 
 App.Activity.FIXTURES = [
   {
@@ -12,55 +15,60 @@ App.Activity.FIXTURES = [
     isQuestion:  false
     duration:    0.75
     createdAt:   AppDate.daysAgo(2)
-    project:     1
-    task:        11
-    id:          111
+    company:     1
+    project:     11
+    task:        111
+    id:          1111
   }
   {
     description: "I don't care, it's not there anymore"
     isQuestion:  false
     duration:    0.25
     createdAt:   AppDate.yesterday()
-    project:     1
-    task:        11
-    id:          112
+    company:     1
+    project:     11
+    task:        111
+    id:          1112
   }
   {
     description: "Really???"
     isQuestion:  true
     duration:    0
     createdAt:   AppDate.today()
-    project:     1
-    task:        11
-    id:          113
+    company:     1
+    project:     11
+    task:        111
+    id:          1113
   }
   {
     description: "Building the task manager..."
     isQuestion:  false
     duration:    12
     createdAt:   AppDate.daysAgo(12)
-    project:     2
-    task:        21
-    id:          211
+    company:     1
+    project:     12
+    task:        121
+    id:          1211
   }
   {
     description: "Create a new activity"
     isQuestion:  false
     duration:    12
     createdAt:   AppDate.daysAgo(12)
-    project:     2
-    task:        21
-    id:          212
+    company:     1
+    project:     12
+    task:        121
+    id:          1212
   }
   {
     description: "Adding project management"
     isQuestion:  false
     duration:    8
     createdAt:   AppDate.today()
-    project:     2
-    task:        22
-    id:          221
+    company:     1
+    project:     12
+    task:        122
+    id:          1221
   }
 ]
 
-DS.RESTAdapter.configure 'plurals', activity: 'activities'
