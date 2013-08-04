@@ -4,7 +4,7 @@ App.Project = DS.Model.extend
   createdAt:   DS.attr('date')
   company:     DS.belongsTo('App.Company')
   tasks:       DS.hasMany('App.Task')
-  # activities:  DS.hasMany('App.Activity') # useless
+  activities:  DS.hasMany('App.Activity')
 
   duration: (->
     sum = 0
@@ -21,6 +21,8 @@ App.Project.FIXTURES = [
     company:     1
     id:          11
     tasks:       [111]
+    activities:  [1111, 1112, 1113]
+
   }
   {
     name:        "Project Ember T"
@@ -29,5 +31,6 @@ App.Project.FIXTURES = [
     company:     1
     id:          12
     tasks:       [121, 122]
+    activities:  [1211, 1212, 1221]
   }
 ]

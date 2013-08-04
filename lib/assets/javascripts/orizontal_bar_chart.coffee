@@ -15,5 +15,5 @@ class @OrizontalBarChart
     @chart.selectAll('div')
       .data(@data).enter()
       .append('div')
-      .style('width', ((d) -> d * 10 + 'px'))
+      .style('width', ((d) -> d * 5 + 'px'))
       .text((d) -> d)

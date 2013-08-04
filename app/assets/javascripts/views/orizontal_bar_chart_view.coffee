@@ -10,4 +10,4 @@ App.OrizontalBarChartView = Em.View.extend
     console.log 'updateChart'
     data = @get('projects.@each.duration').toArray()
     @get('chart').draw(data)
-  ).observes('projects.@each.duration')
+  ).observes('isLoaded', 'projects.@each.duration')

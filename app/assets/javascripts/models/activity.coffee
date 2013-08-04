@@ -44,7 +44,7 @@ App.Activity.FIXTURES = [
     description: "Building the task manager..."
     isQuestion:  false
     duration:    12
-    createdAt:   AppDate.daysAgo(12)
+    createdAt:   AppDate.daysAgo(5)
     company:     1
     project:     12
     task:        121
@@ -54,7 +54,7 @@ App.Activity.FIXTURES = [
     description: "Create a new activity"
     isQuestion:  false
     duration:    12
-    createdAt:   AppDate.daysAgo(12)
+    createdAt:   AppDate.daysAgo(6)
     company:     1
     project:     12
     task:        121
