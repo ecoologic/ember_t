@@ -15,6 +15,8 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require d3
+//= require orizontal_bar_chart
 //= require app_date
 //= require_self
 //= require app
