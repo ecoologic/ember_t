@@ -25,7 +25,7 @@ App.Project.FIXTURES = [
   {
     name:        "Project Ember T"
     description: "Account - Users - *Projects* - Tasks - Activities"
-    createdAt:   AppDate.daysAgo(10)
+    createdAt:   AppDate.daysAgo(7)
     company:     1
     id:          12
     tasks:       [121, 122]

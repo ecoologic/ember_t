@@ -4,9 +4,14 @@ class @OrizontalBarChart
     @parentId = parentId
     @data = data
     @chart = d3.select('#' + parentId)
-      .append('div').attr('class', 'orizontal-bar-chart')
+      .attr('class', 'orizontal-bar-chart')
 
-  draw: ->
+  setData: (data) -> @data = data
+
+  draw: (data) ->
+    @setData(data) if data?
+
+    @chart.selectAll('div').remove()
     @chart.selectAll('div')
       .data(@data).enter()
       .append('div')

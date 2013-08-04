@@ -1,12 +1,13 @@
 App.OrizontalBarChartView = Em.View.extend
+  attributeBindings: ['projects']
+
   didInsertElement: ->
     console.log 'didInsertElement'
-    data = [1,2, 3]
-    @set('data', data)
+    chart = new OrizontalBarChart(@get('elementId'), [])
+    @set('chart', chart)
 
   updateChart: (->
     console.log 'updateChart'
-    data = @get('data')
-    chart = new OrizontalBarChart(@get('elementId'), data)
-    chart.draw()
-  ).observes('data')
+    data = @get('projects.@each.duration').toArray()
+    @get('chart').draw(data)
+  ).observes('projects.@each.duration')
