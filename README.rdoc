@@ -1,9 +1,42 @@
 == README
 
+App features
 * prj - task - activity (prj - task nesting)
-* in-place editing
+* in-place editing (task / activities)
 * duration task / prj total
 * "d3" graph
 * mark question 1.5way binding
 * last question
+* md / time helper
+
+Ember power
+* nested resources (shareable url)
+* multiple controllers
+* data-binding
+
+Ember MVC
+unique url
+  many resources
+  russian doll layout
+conv over conf, especially controller (proxy)
+
+(router)
+View = template      (view)
+--Controller--
+Model
+
+
+routes
+outlet inside outlet (app project task)
+in-place editing (activity_form_view.coffee)
+duration (models/project.coffee)
+  forEach gotcha or model not ready
+  fixtures - if your resources are nested your (url) ids should be nested.
+isQuestion (activity_form_view.coffee)
+
+chartView
+
+
+
+
 
